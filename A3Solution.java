@@ -244,7 +244,7 @@ public class A3Solution {
     public static void afterAll(Connection connection) {
         try {
             Statement statement = connection.createStatement();
-            //statement.executeUpdate("DROP TABLE IF EXISTS employee, department");
+            statement.executeUpdate("DROP TABLE IF EXISTS employee, department");
             connection.close();
         } catch (Exception e) {
             System.out.println("Unable to drop tables and close connection");
